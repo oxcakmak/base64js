@@ -81,17 +81,3 @@ class Base64 {
     return /^[A-Za-z0-9+/=]+$/.test(input) && input.length % 4 === 0;
   }
 }
-
-// Example Usage
-try {
-  const text = "Hello, World!";
-  const encoded = Base64.encode(text);
-  console.log("Encoded:", encoded); // Encoded: SGVsbG8sIFdvcmxkIQ==
-  
-  const decoded = Base64.decode(encoded);
-  console.log("Decoded:", decoded); // Decoded: Hello, World!
-  
-  console.log("Is Valid Base64:", Base64.isValidBase64(encoded)); // true
-} catch (error) {
-  console.error("Error:", error.message);
-}
